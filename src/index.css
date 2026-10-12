@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 60 4% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 4% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 60 4% 10%;
+    --primary: 351 80% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 84 100% 89%;
+    --secondary-foreground: 60 4% 10%;
+    --muted: 30 8% 94%;
+    --muted-foreground: 30 5% 42%;
+    --accent: 351 80% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 8% 88%;
+    --input: 30 8% 88%;
+    --ring: 351 80% 56%;
+    --radius: 1.25rem;
+  }
+
+  html {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+  }
+
+  body {
+    @apply bg-[#fcfbfa] text-[#21221f] antialiased;
+  }
+
+  .font-display {
+    font-family: 'Baloo 2', 'Nunito', sans-serif;
+  }
+}
+
+/* Animación de pulso suave para pistas */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.animate-wiggle {
+  animation: wiggle 0.6s ease-in-out infinite;
+}
+
+/* Rebote de celebración */
+@keyframes pop-in {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop-in {
+  animation: pop-in 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
